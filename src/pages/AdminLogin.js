@@ -22,7 +22,7 @@ const AdminLogin = () => {
       const response = await loginAdmin({ username, password });
       if (response.data.success) {
         login(response.data.user, response.data.access_token);
-        navigate('/admin/dashboard');
+        navigate('/admin/datasets');
       } else {
         setError(response.data.message || 'Login failed');
       }

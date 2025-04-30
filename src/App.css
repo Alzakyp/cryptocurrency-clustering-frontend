@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.dataset-selector {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dataset-selector .btn-group {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dataset-selector .btn {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  text-align: left;
+}
+
+.dataset-selector .btn .badge {
+  border-radius: 20px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .dataset-selector .btn-group {
+    flex-direction: column;
+  }
+
+  .dataset-selector .btn {
+    width: 100%;
+  }
+} 

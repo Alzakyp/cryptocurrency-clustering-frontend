@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import './dashboard.css';
 
 // Pages
 import Home from './pages/Home';
 import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
+import DatasetDashboard from './pages/DatasetDashboard';
 
 // Components
 import Navbar from './components/common/Navbar';
@@ -32,10 +33,18 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route 
-            path="/admin/dashboard" 
+            path="/admin" 
             element={
               <ProtectedRoute>
-                <AdminDashboard />
+                <Navigate to="/admin/datasets" replace />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/datasets" 
+            element={
+              <ProtectedRoute>
+                <DatasetDashboard />
               </ProtectedRoute>
             } 
           />

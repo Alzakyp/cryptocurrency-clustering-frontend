@@ -22,7 +22,7 @@ const Navbar = () => {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             {isAuthenticated ? (
               <>
-                <Nav.Link as={Link} to="/admin/dashboard">Dashboard</Nav.Link>
+                <Nav.Link as={Link} to="/admin/datasets">Datasets</Nav.Link>
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </>
             ) : (
